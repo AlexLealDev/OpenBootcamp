@@ -4,6 +4,7 @@ public class Funciones {
 
     //se les llamará métodos cuando estemos utilizando programación orientada a objetos
     //y se llamará funciones en aquellos casos que no
+    //entendemos función por un bloque de código que se puede repetir
 
     //a continuación se ve como se puede mostrar el texto en pantalla de diferentes opciones
     /*
