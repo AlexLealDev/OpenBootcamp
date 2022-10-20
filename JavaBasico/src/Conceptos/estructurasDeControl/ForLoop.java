@@ -1,6 +1,6 @@
-package Conceptos;
+package Conceptos.estructurasDeControl;
 
-public class FoorLoop {
+public class ForLoop {
 
     public static void main(String[] agrs) {
 

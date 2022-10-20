@@ -1,4 +1,4 @@
-package Conceptos;
+package Conceptos.estructurasDeControl;
 
 public class Switch {
 
