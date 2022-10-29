@@ -13,7 +13,7 @@ public class CocheElectrico extends Coche {
         this.motorElectrico = motorElectrico;
     }
 
-    public CocheElectrico(String color, String fabricante, String modelo, Double peso, Double largo, String motorElectrico) {
+    public CocheElectrico(String color, String fabricante, String modelo, double peso, double largo, String motorElectrico) {
         super(color, fabricante, modelo, peso, largo);
         this.motorElectrico = motorElectrico;
         //el metodo super nos permite invocar a un constructor de la clase posterior
@@ -21,7 +21,7 @@ public class CocheElectrico extends Coche {
 
     @Override
     public void acelerar(Integer cantidad) {
-        Integer cantidadAjustada = cantidad * 2;
+        int cantidadAjustada = cantidad * 2;
         super.acelerar(cantidadAjustada);
     }
 

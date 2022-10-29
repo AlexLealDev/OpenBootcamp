@@ -7,7 +7,8 @@ public class CocheMain {
         String coche = "renault";
         //Coche cocheObj = new Coche();
 
-        Coche cocheObj2 = new CocheElectrico("plata", "renault", "megane", 1500.2, 5.4, "combustión");
+        Coche cocheObj2 = new CocheElectrico("plata", "renault", "megane", 1500.2, 5.4,
+                "combustión");
 
         //cocheObj2.acelerar(20);
             System.out.println(cocheObj2);
