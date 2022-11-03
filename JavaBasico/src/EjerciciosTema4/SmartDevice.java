@@ -27,4 +27,17 @@ public class SmartDevice {
     }
 // 3. Metodos
 
+
+    @Override
+    public String toString() {
+        return "SmartDevice{" +
+                "marca='" + marca + '\'' +
+                ", fabricacionPais='" + fabricacionPais + '\'' +
+                ", fabricacionAno=" + fabricacionAno +
+                ", peso=" + peso +
+                ", alto=" + alto +
+                ", ancho=" + ancho +
+                ", precio=" + precio +
+                '}';
+    }
 }

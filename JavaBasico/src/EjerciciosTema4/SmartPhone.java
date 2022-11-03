@@ -28,4 +28,16 @@ public class SmartPhone extends SmartDevice {
 
     // 3. Metodos
 
+
+    @Override
+    public String toString() {
+        return "SmartPhone{" +
+                "modelo='" + modelo + '\'' +
+                ", sistemaOperativo='" + sistemaOperativo + '\'' +
+                ", pixelsCamara=" + pixelsCamara +
+                ", gigasRam=" + gigasRam +
+                ", almacenamiento=" + almacenamiento +
+                ", nfc=" + nfc +
+                '}';
+    }
 }

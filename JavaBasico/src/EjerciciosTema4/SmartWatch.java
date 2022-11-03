@@ -23,4 +23,14 @@ public class SmartWatch extends SmartDevice{
 
     // 3. Metodos
 
+
+    @Override
+    public String toString() {
+        return "SmartWatch{" +
+                "modelo='" + modelo + '\'' +
+                ", nfc=" + nfc +
+                ", frecuenciaCardiaca=" + frecuenciaCardiaca +
+                ", microfono=" + microfono +
+                '}';
+    }
 }
