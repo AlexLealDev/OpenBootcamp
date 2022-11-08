@@ -1,8 +1,11 @@
-package Conceptos;
+package Conceptos.errores;
 
 import java.util.Scanner;
 
 public class ThrowMain {
+
+    // Throw se utiliza para generar una excepción
+    // Throws se utiliza para declarar que una función devuelve excepciones
 
    public static void main(String[] args) {
         try {

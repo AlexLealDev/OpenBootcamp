@@ -10,6 +10,12 @@ public class Refactoring {
         Ante un grupo de condiciones (if) que se está haciendo largo se puede invocar un método que reuna las condiciones
         por lo que el if solo tendría que invocar el método:
 
+        private double extraSalary;
+        private int seniority;
+        private int education;
+        private int incidents;
+        private boolean certifications;
+
         MAL
         double calculateExtraSalary(){
             double result = 0;
@@ -184,13 +190,12 @@ public class Refactoring {
 
         public class Main {
 
-            void printProductPrice(){
+            void printProductPrice(Order order){
                 Double totalPrice = order.getPrice() * order.getQuantity() -
                     order.getDiscount() + order.getShipping() * 2;
 
                 System.out.println(totalPrice);
             }
-
 
         }
 
@@ -217,6 +222,95 @@ public class Refactoring {
             }
 
         }
-     */
+
+        6. Números mágicos
+            Si repites en 10 sitios diferentes a lo largo de una clase un valor y el día de mañana quieres cambiarlo
+            es complicado. La solución es remplazar esos números por una constante que sea accesible para utilizarla y
+            que a la larga sea más fácil de mantener.
+
+            MAL
+
+            public static void main(String[] args){
+                double price = 129.99;
+
+                double discountPrice = calculateDiscountPrice(price);
+                double shippingPrice = calculateShippingPrice(price);
+            }
+
+            private static double calculateDiscountPrice(double price) {
+                return price < 100 ? 4.99 : 0; // hard coded
+
+            }
+
+            private static double calculateShippingPrice(double price) {
+                return price * 0.1;
+            }
+
+            BIEN
+
+            private static final double PRECIO_MINIMO = 100;
+            private static final double PRECIO_ENVIO = 4.99;
+            private static final double PRECIO_GRATIS = 0;
+            private static final double DESCUENTO = 0.1;
+
+            public static void main(String[] args){
+                double price = 129.99;
+
+                double discountPrice = calculateDiscountPrice(price);
+                double shippingPrice = calculateShippingPrice(price);
+            }
+
+            private static double calculateDiscountPrice(double price) {
+                return price < PRECIO_MINIMO ? PRECIO_ENVIO : ENVIO_GRATIS;
+
+            }
+
+            private static double calculateShippingPrice(double price) {
+                return price * DESCUENTO;
+            }
+
+        7. REMOVE ASSIGN
+            Una técnica de refactoring trata de que los parámetros no se modifiquen. En el caso de modificar algo, crea
+            una variable nueva para modificar esa variable, pero deja la variable original como estaba.
+
+            MAL
+
+            double calculateDiscount(Order order, double totalPrice) {
+                if (order == null { || order.getPrice() == null) // programación defensiva
+                    return totalPrice;
+
+                 if (order.getPrice() > 100)
+                    totalPrice += order.getPrice() * order.getOffer(); // sobreescribe totalPrice
+                 return totalPrice;
+
+            BIEN
+
+            double calculateDiscount(Order order, double totalPrice) {
+                double result = totalPrice;
+
+                if (order == null { || order.getPrice() == null) // programación defensiva
+                    return result;
+
+                 if (order.getPrice() > 100)
+                    totalPrice += order.getPrice() * order.getOffer(); // sobreescribe totalPrice
+                 return result;
+
+        8. REPLACE METHOD
+            En la POO, cuando tenemos que hacer un cálculo complejo en vez de meter ese cálculo en una clase se debe crear
+            otra clase cuyo objetivo sea ese cálculo. En la primera clase, en vez de tener el cálculo, solo se tendría el
+            que crear un objeto de la clase que contiene el cálculo.
+
+            MAL
+
+
+
+            BIEN
+
+
+        9. MÁS EJEMPLOS DE REFACTORING EN:
+
+            refactoring.com
+            refactoring.guru/refactoring/catalog
+             */
 
 }

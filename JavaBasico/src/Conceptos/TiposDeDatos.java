@@ -1,6 +1,6 @@
 package Conceptos;
 
-public class Tipos {
+public class TiposDeDatos {
 
     // Esquema de como se crean los tipos de datos
     /*

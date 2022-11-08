@@ -1,4 +1,4 @@
-package Conceptos;
+package Conceptos.errores;
 
 public class NameFormatException extends Exception {
 

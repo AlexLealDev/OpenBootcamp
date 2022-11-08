@@ -1,6 +1,6 @@
 package Conceptos;
 
-public class Operadores {
+public class TiposOperadores {
 
     public static void main(String[] args) {
 
